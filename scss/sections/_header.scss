@@ -1,0 +1,112 @@
+.header {
+    min-height: 30vh;
+    width: 100vw;
+    padding: 10px;
+    margin-top: 15px;
+    position: fixed;
+    background-color: #ffffff;
+
+    .header-nav {
+        display: flex;
+        align-items: center;
+
+        .menu-hamburguesa {
+            .menu-boton {
+                // margin-right: 10px;
+                // width: 23px;
+                // border: none;
+                height: 30px;
+                width: 30px;
+                border: none;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 17px;
+                &:hoover{
+                    border-color: white;
+                }
+            }
+            .iniciales-oc{
+                width: 30px;
+                }
+
+            .menu-lista {
+
+                .active {
+                    font-weight: 600;
+                }
+            }
+        }
+
+
+        .header-logo {
+            margin: auto;
+
+            .logo {
+                width: 60vw;
+                margin: auto;
+            }
+        }
+    }
+}
+
+/*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
+
+@media (min-width: 768px) {
+    .header {
+        .header-nav {
+            .menu-hamburguesa {
+                .menu-boton {}
+
+                .menu-lista {
+                    .active {}
+                }
+            }
+
+
+            .header-logo {
+                margin: auto;
+
+                .logo {
+                    width: 255px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .header {
+        .header-nav {
+            // flex-direction: column !important;
+            // height: 0px;
+            .menu-hamburguesa {
+                .menu-boton {}
+
+                .menu-lista {
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+
+
+            .header-logo {
+
+                .logo {
+                }
+            }
+        }
+    
+    .navbar .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+}
+}
+}
+
+
+

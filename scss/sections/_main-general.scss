@@ -1,0 +1,15 @@
+.body{
+    background-image: $fondo-oc;
+}
+
+.main {
+    min-height: 60vh;
+    width: 100vw;
+    margin: auto;
+    // padding-top: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}

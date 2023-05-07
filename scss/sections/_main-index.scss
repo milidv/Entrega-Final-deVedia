@@ -1,0 +1,131 @@
+.index-container1 {
+    width: 100vw;
+    margin: auto;
+    margin-top: 45vh;
+
+    padding-bottom: 40px;
+    text-align: center;
+    // background-color: #c0a073;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .c1-img{
+        height: 220px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+    .c1-text{
+        h1 {
+            margin-top: 40px;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        p {
+            margin: 20px 20px 10px 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.index-container2 {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .sucursales{
+        .c2-img {
+            width: 100%;
+            margin-top: 30px;
+            text-align: center;
+            &:hover {
+                border-radius: 100px;
+                transform: scale(1.2);
+            }
+            img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+
+            }
+        }
+        .c2-text {
+            width: 100%;
+            text-align: center;
+            h2 {
+                margin-top: 5px;
+                margin-bottom: 20px;
+                font-weight: 600;
+                font-size: 20px;
+                letter-spacing: 1px;
+            }
+        }
+        
+        
+    }
+}
+
+/*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
+
+@media (min-width: 768px) {
+    .index-container1 {
+        .c1-img{
+            height: 420px;
+        }
+    }
+    .index-container2 {
+        width: 80%;
+        justify-content: space-evenly;
+        .sucursales{
+            .c2-img {
+                &:hover {
+                }
+                img {
+    
+                }
+            }
+            .c2-text {
+                h2 {
+                    margin-top: 15px;
+                }
+            }
+    
+    }
+}
+}
+
+
+@media (min-width: 1024px) {
+    .index-container1 {
+        .c1-img{
+            height: 520px;
+        }
+    }
+
+.index-container2 {
+    width: 95%;
+    justify-content: space-between;
+    .sucursales{
+        .c2-img {
+            &:hover {
+            }
+            img {
+
+            }
+        }
+        .c2-text {
+            h2 {
+            }
+        }
+    }
+}  
+}  
+
