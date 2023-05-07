@@ -1,0 +1,102 @@
+/* CONTACTO: container 1 */
+
+.contacto-container1 {
+    width: 100%;
+    margin-top: 45vh;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .c1-contacto {
+        margin-bottom: 20px;
+        h1 {
+           margin-top: 40px;
+           font-size: 30px;
+           font-weight: 600;
+           text-align: center;
+           letter-spacing: 1px;
+        }
+        p {
+            margin: 20px 20px 10px 20px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+/* CONTACTO: container 2 */
+
+.contacto-container2 {
+    width: 285px;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #c0a073;
+    border-radius: 5px;
+    p {
+        padding: 30px;
+        margin-bottom: 1px;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    .ficha-contacto {
+        height: 400px;
+        width: 230px;
+        margin: auto;
+        padding-bottom: 30px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .form{
+            .input-contact{
+                width: 100%;
+                margin: auto;
+                margin-bottom: 12px;
+                padding: 10px;
+                background-color: #d2cec8;
+                border-radius: 5px;
+                font-family: calibri;
+                font-size: 16px;
+                border: 2px solid #6f5f4a;
+                &:focus {
+                    background-color: #ffffff;
+                    transform: scale(1.05);
+                    border: 0.1px solid #6b6868;
+                }
+            }
+            .submit-button{
+                width: 80px;
+                height: 35px;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;
+                background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+                font-weight: 600;
+                letter-spacing: 1px;
+                border: 1px solid #1f1e1e;
+                border-radius: 10px;
+                margin: auto;
+                margin-top: 20px;
+                box-shadow: 2px 2px 4px rgb(51, 51, 51);
+                &:hover {
+                    color: #2c2c2c;
+                    font-size: 13px;
+                    transform: scale(1.05);
+                    transition: 2s transform;
+                }
+                
+            }
+        }
+    }
+}
+
