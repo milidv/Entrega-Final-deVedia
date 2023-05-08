@@ -123,11 +123,8 @@
         margin-top: 45vh;
   }
   .donde-encontrarnos-container2 {
-    h3 {
-    }
     .ubicacion {
       .c2-sucursales {
-        // width: 90vw;
         padding-bottom: 25vh;
         margin: auto;
         grid-template-columns: 1fr 1fr 1fr;
@@ -138,18 +135,16 @@
         grid-template-areas:
           "map map foto"
           "map map horarios";
-        //   "foto horarios";
         justify-items: stretch;
         .map {
           width: 40%;
           height: 300px;
+          margin-left: 50px;
           iframe {
             margin: auto;
             padding: 20px;
-            margin-left: 25vh;
             width: 400px;
             height: 450px;
-            // height: 300px;
           }
         }
         .foto {
@@ -158,8 +153,7 @@
           margin-bottom: 0;
 
           img {
-            margin-right: 25vh;
-
+            margin-right: 30px;
             padding: 20px;
             width: 215px;
             height: 215px;
@@ -171,7 +165,6 @@
           height: 20%;
           p {
             margin-right: 25vh;
-
             padding: 20px;
             width: 215px;
             text-align: center;
@@ -179,8 +172,6 @@
           }
         }
       }
-    }
-    hr {
     }
   }
 }
