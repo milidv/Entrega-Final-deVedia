@@ -2,8 +2,8 @@
     min-height: 30vh;
     width: 100vw;
     padding: 10px;
-    margin-top: 15px;
-    position: fixed;
+    margin-top: 0;
+    // position: fixed;
     background-color: #ffffff;
 
     .header-nav {
@@ -11,6 +11,8 @@
         align-items: center;
 
         .menu-hamburguesa {
+            // position: fixed;
+
             .menu-boton {
                 // margin-right: 10px;
                 // width: 23px;
@@ -83,7 +85,12 @@
             .menu-hamburguesa {
                 .menu-boton {}
 
-                .menu-lista {
+                .menu{
+                    // display: flex;
+                    // justify-content: space-between;
+                    // width: 100vw;
+                    .menu-lista {
+                    // background-color: rgb(255, 255, 255);
                     ul{
                         display: flex;
                         flex-direction: row;
@@ -92,11 +99,13 @@
                     }
                 }
             }
+            }
 
 
             .header-logo {
 
                 .logo {
+                    // margin-top: 50px;
                 }
             }
         }

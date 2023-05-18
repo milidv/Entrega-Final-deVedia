@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet');
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +11,7 @@
   min-height: 30vh;
   width: 100vw;
   padding: 10px;
-  margin-top: 15px;
-  position: fixed;
+  margin-top: 0;
   background-color: #ffffff; }
   .header .header-nav {
     display: flex;
@@ -44,7 +43,7 @@
       width: 255px; } }
 
 @media (min-width: 1024px) {
-  .header .header-nav .menu-hamburguesa .menu-lista ul {
+  .header .header-nav .menu-hamburguesa .menu .menu-lista ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,7 +53,8 @@
     flex-direction: column; } }
 
 .body {
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); }
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: "Montserrat", sans-serif; }
 
 .main {
   min-height: 60vh;
@@ -65,33 +65,82 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap; }
+  .main .highlighted-text {
+    color: #fff; }
 
-.index-container1 {
-  width: 100vw;
-  margin: auto;
-  margin-top: 45vh;
-  padding-bottom: 40px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .index-container1 .c1-img {
-    height: 220px;
-    overflow: hidden; }
-    .index-container1 .c1-img img {
-      width: 100%; }
-  .index-container1 .c1-text h1 {
-    margin-top: 40px;
-    font-size: 30px;
-    font-weight: 600;
+.s1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684355040/proyecto-final/rsz_fondo-granos-cafe_t1oifi.avif);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed; }
+  .s1 h1 {
+    font-size: calc(1.1rem + 3vw);
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
     text-align: center;
-    letter-spacing: 1px; }
-  .index-container1 .c1-text p {
-    margin: 20px 20px 10px 20px;
-    font-weight: 400;
-    letter-spacing: 1px; }
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: capitalize; }
 
+.main-index-s1 {
+  display: flex;
+  flex-direction: column-reverse;
+  /* MQ 1024 flex direction row*/ }
+  .main-index-s1 .s1-left {
+    background-color: #a1b27d;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .main-index-s1 .s1-left h1 {
+      /* font-size: calc(2rem + 1.8vw); */
+      font-weight: 800;
+      font-size: calc(1.1rem + 2vw);
+      text-transform: uppercase;
+      width: 50%;
+      margin: auto;
+      /* margin-top: 40px; */
+      margin-top: 3vw;
+      /* margin-bottom: 40px; */
+      margin-bottom: 2vw;
+      /* margin-left: 80px; */
+      margin-left: 5vw; }
+    .main-index-s1 .s1-left p {
+      font-size: calc(0.7rem + 0.4vw);
+      text-align: left;
+      line-height: calc(1rem + 1.2vw);
+      width: 80%;
+      margin: auto;
+      /* margin-left: 80px; */
+      margin-left: 5vw;
+      padding-bottom: 20px; }
+    .main-index-s1 .s1-left .s1-button {
+      margin-top: 0; }
+      .main-index-s1 .s1-left .s1-button a {
+        border: 3px solid #fff;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #fff;
+        height: 40 px;
+        border-radius: 30px;
+        font-weight: bold;
+        display: inline-block;
+        /*margin-left: 10vw; */ }
+  .main-index-s1 .s1-right {
+    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684042038/proyecto-final/index_gy2zxk.avif);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh; }
+
+/* usar extend pra todas las pages */
 .index-container2 {
   padding: 30px;
   display: flex;
@@ -131,6 +180,8 @@
       margin-top: 15px; } }
 
 @media (min-width: 1024px) {
+  .main-index-s1 {
+    flex-direction: row; }
   .index-container1 .c1-img {
     height: 520px; }
   .index-container2 {
@@ -138,6 +189,70 @@
     justify-content: space-between; } }
 
 /* NUESTRO CAFÉ: container 1 */
+.main-nuestro-cafe-s1 {
+  display: flex;
+  flex-direction: column-reverse;
+  /* flex-direction: column-reverse; */
+  /* MQ 1024 flex direction row*/ }
+  .main-nuestro-cafe-s1 .s1-left {
+    background-color: #a1b27d;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .main-nuestro-cafe-s1 .s1-left h1 {
+      /* font-size: calc(2rem + 1.8vw); */
+      font-weight: 800;
+      font-size: calc(1.1rem + 2vw);
+      text-transform: uppercase;
+      width: 50%;
+      margin: auto;
+      /* margin-top: 40px; */
+      margin-top: 3vw;
+      /* margin-bottom: 40px; */
+      margin-bottom: 2vw;
+      /* margin-left: 80px; */
+      margin-left: 5vw; }
+    .main-nuestro-cafe-s1 .s1-left p {
+      font-size: calc(0.7rem + 0.6vw);
+      text-align: left;
+      line-height: calc(1rem + 1.2vw);
+      width: 80%;
+      margin: auto;
+      /* margin-left: 80px; */
+      margin-left: 5vw; }
+    .main-nuestro-cafe-s1 .s1-left .s1-button {
+      margin-top: 0; }
+      .main-nuestro-cafe-s1 .s1-left .s1-button a {
+        border: 3px solid #fff;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #fff;
+        height: 40 px;
+        border-radius: 30px;
+        font-weight: bold;
+        display: inline-block;
+        /*margin-left: 10vw; */ }
+  .main-nuestro-cafe-s1 .s1-right {
+    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684075831/proyecto-final/nc-cafe-en-casa_mvdurz.avif);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    /* min-width: 210px;
+min-height: 264px; */ }
+
+.video {
+  height: 100vh; }
+
+iframe {
+  width: 100%;
+  height: 100%;
+  /* height: 100%; */ }
+
 .nuestro-cafe-container1 {
   width: 100vw;
   margin: auto;
@@ -297,6 +412,10 @@
           width: 80%;
           margin: auto;
           text-align: center; } }
+
+@media (min-width: 1024px) {
+  .main-nuestro-cafe-s1 {
+    flex-direction: row; } }
 
 /* DONDE ENCONTRARNOS: container 1 */
 /* no se si lo voy a poner o no al listado, quizas haya q crear un div */
@@ -479,88 +598,134 @@
     margin-top: 50vh; } }
 
 /* CONTACTO: container 1 */
-.contacto-container1 {
-  width: 100%;
-  margin-top: 45vh;
-  text-align: center;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap; }
-  .contacto-container1 .c1-contacto {
-    margin-bottom: 20px; }
-    .contacto-container1 .c1-contacto h1 {
-      margin-top: 40px;
-      font-size: 30px;
-      font-weight: 600;
-      text-align: center;
-      letter-spacing: 1px; }
-    .contacto-container1 .c1-contacto p {
-      margin: 20px 20px 10px 20px;
-      font-weight: 400;
-      letter-spacing: 1px; }
-      .contacto-container1 .c1-contacto p span {
-        font-weight: 600; }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-/* CONTACTO: container 2 */
-.contacto-container2 {
-  width: 285px;
-  margin: auto;
-  margin-bottom: 40px;
-  background-color: #c0a073;
-  border-radius: 5px; }
-  .contacto-container2 p {
-    padding: 30px;
-    margin-bottom: 1px;
-    text-align: center;
-    font-weight: 400;
-    letter-spacing: 1px; }
-  .contacto-container2 .ficha-contacto {
-    height: 400px;
-    width: 230px;
+body,
+button,
+input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px; }
+
+.contacto-s1 {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #c29c84; }
+  .contacto-s1 .container {
+    flex: 0 1 700px;
     margin: auto;
-    padding-bottom: 30px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap; }
-    .contacto-container2 .ficha-contacto .form .input-contact {
-      width: 100%;
-      margin: auto;
-      margin-bottom: 12px;
-      padding: 10px;
-      background-color: #d2cec8;
-      border-radius: 5px;
-      font-family: calibri;
-      font-size: 16px;
-      border: 2px solid #6f5f4a; }
-      .contacto-container2 .ficha-contacto .form .input-contact:focus {
-        background-color: #ffffff;
-        transform: scale(1.05);
-        border: 0.1px solid #6b6868; }
-    .contacto-container2 .ficha-contacto .form .submit-button {
-      width: 80px;
-      height: 35px;
-      font-size: 14px;
-      cursor: pointer;
-      text-align: center;
-      background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
-      font-weight: 600;
-      letter-spacing: 1px;
-      border: 1px solid #1f1e1e;
-      border-radius: 10px;
-      margin: auto;
-      margin-top: 20px;
-      box-shadow: 2px 2px 4px #333333; }
-      .contacto-container2 .ficha-contacto .form .submit-button:hover {
-        color: #2c2c2c;
-        font-size: 13px;
-        transform: scale(1.05);
-        transition: 2s transform; }
+    padding: 10px; }
+    .contacto-s1 .container .c1-titulo {
+      margin-bottom: 30px; }
+    .contacto-s1 .container .screen {
+      position: relative;
+      background: #3e3e3e;
+      border-radius: 15px; }
+      .contacto-s1 .container .screen:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        z-index: -1; }
+      .contacto-s1 .container .screen .screen-body {
+        padding: 40px;
+        display: flex;
+        flex-direction: column; }
+        .contacto-s1 .container .screen .screen-body .screen-body-item {
+          flex: 1;
+          padding: 0; }
+          .contacto-s1 .container .screen .screen-body .screen-body-item .app-title {
+            display: flex;
+            flex-direction: column;
+            /* flex-direction: row; */
+            position: relative;
+            color: #fff;
+            font-size: 26px; }
+            .contacto-s1 .container .screen .screen-body .screen-body-item .app-title:after {
+              content: "";
+              display: none;
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: -10px;
+              width: 25px;
+              height: 4px;
+              background: #fff; }
+            .contacto-s1 .container .screen .screen-body .screen-body-item .app-title span {
+              margin-right: 12px; }
+          .contacto-s1 .container .screen .screen-body .screen-body-item .app-contact {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #888; }
+            .contacto-s1 .container .screen .screen-body .screen-body-item .app-contact p {
+              margin-bottom: 3px; }
+        .contacto-s1 .container .screen .screen-body .left {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 30px; }
+        .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group {
+          margin-bottom: 15px;
+          font-weight: 600; }
+          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-control {
+            width: 100%;
+            padding: 10px 0;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #666;
+            color: #ddd;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: inherit;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            outline: none;
+            transition: border-color 0.2s; }
+          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group::placeholder {
+            color: #666; }
+          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group:focus {
+            border-bottom-color: #ddd; }
+          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            outline: none; }
+            .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button:hover {
+              color: #a1b27d;
+              transform: scale(1.07);
+              transition: 1s transform; }
+        .contacto-s1 .container .screen .screen-body .message {
+          margin-top: 40px; }
+        .contacto-s1 .container .screen .screen-body .buttons {
+          margin-bottom: 0;
+          text-align: right; }
+
+@media screen and (min-width: 520px) {
+  .screen-body .screen-body-item .app-title {
+    /* flex-direction: row; */
+    flex-direction: column; }
+    .screen-body .screen-body-item .app-title:after {
+      display: block; } }
+
+@media screen and (min-width: 600px) {
+  .screen-body {
+    padding: 40px; }
+  .screen-body-item {
+    padding: 0; } }
 
 .footer {
   margin: 0;

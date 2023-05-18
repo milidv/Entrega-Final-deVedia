@@ -1,37 +1,10 @@
-/* CONTACTO: container 1 */
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body,
-button,
-input {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
-
 .contacto-s1 {
   display: flex;
   min-height: 100vh;
-  width: 100vw;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color:#c29c84;
-
   .container {
     flex: 0 1 700px;
     margin: auto;
     padding: 10px;
-    .c1-titulo{
-        // margin-top: 20px;
-        margin-bottom: 30px;
-    }
     .screen {
       position: relative;
       background: #3e3e3e;
@@ -49,24 +22,18 @@ input {
         z-index: -1;
       }
       .screen-body {
-        padding: 40px;
         display: flex;
-        flex-direction: column;
         .screen-body-item {
           flex: 1;
-        //   padding: 50px;
-          padding: 0;
-
+          padding: 50px;
           .app-title {
             display: flex;
             flex-direction: column;
-                        /* flex-direction: row; */
             position: relative;
             color: #fff;
             font-size: 26px;
             &:after {
               content: "";
-              display: none;
               display: block;
               position: absolute;
               left: 0;
@@ -75,30 +42,24 @@ input {
               height: 4px;
               background: #fff;
             }
-            span {
-                margin-right: 12px;
-              }
-  
           }
           .app-contact {
-            // margin-top: auto;
-            margin-top: 15px;
-            font-size: 12px;
+            margin-top: auto;
+            margin-bottom: 1rem;
+            font-size: 8px;
             color: #888;
-            p{
-                margin-bottom: 3px;
+            p {
+              margin-bottom: 0;
             }
           }
         }
         .left {
           display: flex;
           flex-direction: column;
-          margin-bottom: 30px;
         }
         .contacto-form {
           .contacto-form-group {
             margin-bottom: 15px;
-            font-weight: 600;
             .contacto-form-control {
               width: 100%;
               padding: 10px 0;
@@ -107,9 +68,6 @@ input {
               border-bottom: 1px solid #666;
               color: #ddd;
               font-size: 14px;
-              font-weight: 700;
-              line-height: inherit;
-              letter-spacing: 1.4px;
               text-transform: uppercase;
               outline: none;
               transition: border-color 0.2s;
@@ -137,7 +95,6 @@ input {
         }
         .message {
           margin-top: 40px;
-        //   font-weight: 900;
         }
         .buttons {
           margin-bottom: 0;
@@ -148,33 +105,27 @@ input {
   }
 }
 
-
-@media screen and (min-width: 520px) {
+@media screen and (max-width: 520px) {
   .screen-body {
-    // flex-direction: column;
+    flex-direction: column;
     .left {
-    //   margin-bottom: 30px;
+      margin-bottom: 30px;
     }
     .screen-body-item {
-        .app-title {
-          /* flex-direction: row; */
-          flex-direction: column;
-          &:after {
-            // display: none;
-            display: block;
-          }
-          span {
-            // margin-right: 12px;
-          }
+      .app-title {
+        /* flex-direction: row; */
+        &:after {
+          display: none;
         }
+        span {
+          margin-right: 12px;
+        }
+      }
     }
   }
-
-
-
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .screen-body {
     padding: 40px;
   }

@@ -1,131 +1,180 @@
-.index-container1 {
-    width: 100vw;
-    margin: auto;
-    margin-top: 45vh;
-
-    padding-bottom: 40px;
+.s1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684355040/proyecto-final/rsz_fondo-granos-cafe_t1oifi.avif);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+  h1 {
+    font-size: calc(1.1rem + 3vw);
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
     text-align: center;
-    // background-color: #c0a073;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .c1-img{
-        height: 220px;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-        }
-    }
-    .c1-text{
-        h1 {
-            margin-top: 40px;
-            font-size: 30px;
-            font-weight: 600;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-        p {
-            margin: 20px 20px 10px 20px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-    }
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: capitalize;
+  }
 }
 
-.index-container2 {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    .sucursales{
-        .c2-img {
-            width: 100%;
-            margin-top: 30px;
-            text-align: center;
-            &:hover {
-                border-radius: 100px;
-                transform: scale(1.2);
-            }
-            img {
-                width: 200px;
-                height: 200px;
-                border-radius: 50%;
-                overflow: hidden;
+.main-index-s1 {
+  // margin-top: 30vh;
+  display: flex;
+  flex-direction: column-reverse;
+  /* MQ 1024 flex direction row*/
 
-            }
-        }
-        .c2-text {
-            width: 100%;
-            text-align: center;
-            h2 {
-                margin-top: 5px;
-                margin-bottom: 20px;
-                font-weight: 600;
-                font-size: 20px;
-                letter-spacing: 1px;
-            }
-        }
-        
-        
+  .s1-left {
+    background-color: #a1b27d;
+    height: 100vh;
+    width: 50%;
+    // font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      /* font-size: calc(2rem + 1.8vw); */
+      font-weight: 800;
+      font-size: calc(1.1rem + 2vw);
+      text-transform: uppercase;
+      width: 50%;
+      margin: auto;
+      /* margin-top: 40px; */
+      margin-top: 3vw;
+      /* margin-bottom: 40px; */
+      margin-bottom: 2vw;
+      /* margin-left: 80px; */
+      margin-left: 5vw;
     }
+
+    p {
+      font-size: calc(0.7rem + 0.4vw);
+      text-align: left;
+      line-height: calc(1rem + 1.2vw);
+      width: 80%;
+      margin: auto;
+      /* margin-left: 80px; */
+      margin-left: 5vw;
+      padding-bottom: 20px;
+    }
+    .s1-button {
+      margin-top: 0;
+      a {
+        border: 3px solid #fff;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #fff;
+        height: 40 px;
+        border-radius: 30px;
+        font-weight: bold;
+        display: inline-block;
+        /*margin-left: 10vw; */
+      }
+    }
+  }
+  .s1-right {
+    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684042038/proyecto-final/index_gy2zxk.avif);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+  }
+}
+
+/* usar extend pra todas las pages */
+
+.index-container2 {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .sucursales {
+    .c2-img {
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+      &:hover {
+        border-radius: 100px;
+        transform: scale(1.2);
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    .c2-text {
+      width: 100%;
+      text-align: center;
+      h2 {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }
 
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 
 @media (min-width: 768px) {
-    .index-container1 {
-        .c1-img{
-            height: 420px;
+  .index-container1 {
+    .c1-img {
+      height: 420px;
+    }
+  }
+  .index-container2 {
+    width: 80%;
+    justify-content: space-evenly;
+    .sucursales {
+      .c2-img {
+        &:hover {
         }
+        img {
+        }
+      }
+      .c2-text {
+        h2 {
+          margin-top: 15px;
+        }
+      }
     }
-    .index-container2 {
-        width: 80%;
-        justify-content: space-evenly;
-        .sucursales{
-            .c2-img {
-                &:hover {
-                }
-                img {
-    
-                }
-            }
-            .c2-text {
-                h2 {
-                    margin-top: 15px;
-                }
-            }
-    
-    }
+  }
 }
-}
-
 
 @media (min-width: 1024px) {
-    .index-container1 {
-        .c1-img{
-            height: 520px;
-        }
-    }
+  .main-index-s1 {
+    flex-direction: row;
 
-.index-container2 {
+    .s1-left {
+    }
+  }
+  .index-container1 {
+    .c1-img {
+      height: 520px;
+    }
+  }
+
+  .index-container2 {
     width: 95%;
     justify-content: space-between;
-    .sucursales{
-        .c2-img {
-            &:hover {
-            }
-            img {
-
-            }
+    .sucursales {
+      .c2-img {
+        &:hover {
         }
-        .c2-text {
-            h2 {
-            }
+        img {
         }
+      }
+      .c2-text {
+        h2 {
+        }
+      }
     }
-}  
-}  
-
+  }
+}

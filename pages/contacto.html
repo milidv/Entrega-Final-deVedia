@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Café, Original Coffee, Copenhagen, Contacto, Teléfono, Correo electrónico, Consulta, Formulario de contacto, Opiniones.">
-    <meta name="description" content="La página de contacto de Original Coffee, una cafetería ubicada en la vibrante ciudad de Copenhague, es el lugar perfecto para conectarse con su equipo y descubrir más acerca de sus productos y servicios. Desde aquí, puede encontrar la información de contacto de la cafetería, incluyendo su número de teléfono y correo electrónico. También puede enviar un mensaje a través del formulario de contacto para hacer preguntas, dejar tu consulta u opinión sobre nuestros productos y servicios  o solicitar información adicional. Ya sea que esté buscando disfrutar de un delicioso café o explorar la escena cafetera de la ciudad, Original Coffee es el lugar ideal para satisfacer sus antojos.">
+    <meta
+      name="keywords"
+      content="Café, Original Coffee, Copenhagen, Contacto, Teléfono, Correo electrónico, Consulta, Formulario de contacto, Opiniones."
+    />
+    <meta
+      name="description"
+      content="La página de contacto de Original Coffee, una cafetería ubicada en la vibrante ciudad de Copenhague, es el lugar perfecto para conectarse con su equipo y descubrir más acerca de sus productos y servicios. Desde aquí, puede encontrar la información de contacto de la cafetería, incluyendo su número de teléfono y correo electrónico. También puede enviar un mensaje a través del formulario de contacto para hacer preguntas, dejar tu consulta u opinión sobre nuestros productos y servicios  o solicitar información adicional. Ya sea que esté buscando disfrutar de un delicioso café o explorar la escena cafetera de la ciudad, Original Coffee es el lugar ideal para satisfacer sus antojos."
+    />
 
     <title>Contacto | Original Coffee</title>
     <link rel="shortcut icon" href="images/icono-OC.png" />
@@ -65,9 +71,7 @@
                     </li>
 
                     <li class="nav-item">
-                      <a
-                        class="nav-link "
-                        href="./nuestro-cafe.html"
+                      <a class="nav-link" href="./nuestro-cafe.html"
                         >NUESTRO CAFÉ</a
                       >
                     </li>
@@ -79,13 +83,16 @@
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link "  href="./sustentabilidad.html"
+                      <a class="nav-link" href="./sustentabilidad.html"
                         >SUSTENTABILIDAD</a
                       >
                     </li>
 
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="./contacto.html"
+                      <a
+                        class="nav-link active"
+                        aria-current="page"
+                        href="./contacto.html"
                         >CONTACTO</a
                       >
                     </li>
@@ -110,34 +117,75 @@
       <!--     ------------ MAIN ------------     -->
 
       <main class="main">
-        <section class="contacto-container1">
-            <div class="c1-contacto">
-                <h1>¿Querés ponerte en contacto con nosotros?</h1>
-                <p>
-                    Por mail: <br><span> mail@originalcoffee.dk </span>
-                </p>
-                <p>Por teléfono: <br> <span> +45 28 75 63 12</span>
-                </p>
+        <section class="contacto-s1">
+          <div class="container">
+            <div class="c1-titulo">
+              <h1>¿Querés ponerte en contacto con nosotros?</h1>
             </div>
-        </section>
-        <section class="contacto-container2">
-            <p>
-                O envianos tu consulta u opinión:
-            </p>
-            <!-- Formulario de contacto -->
-            <div class="ficha-contacto">
-                <form action="#" method="get" enctype="text/plain" class="form">
-                    <input class="input-contact" type="text" required placeholder="Nombre y apellido">
-                    <input class="input-contact" type="number" min="18" max="99" placeholder="Edad" required>
-                    <input class="input-contact" type="email" name="Email contacto" id="" placeholder="Email">
-                    <input class="input-contact" type="tel" placeholder="Teléfono" required>
-                    <!-- <input type="text" placeholder="Mensaje" required> -->
-                    <textarea class="input-contact" name="Consulta" placeholder="Dejanos acá tu consulta u opinión"></textarea>
-                    <input class=" submit-button button" type="submit" value="Enviar" id="boton">
-                </form>
-            </div>
-        </section>
 
+            <div class="screen">
+              <div class="screen-body">
+                <div class="screen-body-item left">
+                  <h1 class="app-title">
+                    <span>Dejanos</span>
+                    <span>tu opinión o consulta</span>
+                  </h1>
+                  <img src="" alt="">
+                  <div class="app-contact">
+                    <p>mail@originalcoffee.dk</p>
+                    <p>+45 28 75 63 12</p>
+                  </div>
+                </div>
+                <div class="screen-body-item">
+                  <form
+                    class="contacto-form"
+                    action="#"
+                    method="get"
+                    enctype="text/plain"
+                  >
+                    <div class="contacto-form-group">
+                      <input
+                        class="contacto-form-control"
+                        type="text"
+                        required
+                        placeholder="Nombre y apellido"
+                      />
+                    </div>
+                    <div class="contacto-form-group">
+                      <input
+                        class="contacto-form-control"
+                        type="email"
+                        name="Email contacto"
+                        id=""
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="contacto-form-group">
+                      <input
+                        class="contacto-form-control"
+                        type="tel"
+                        placeholder="Teléfono"
+                        required
+                      />
+                    </div>
+                    <div class="contacto-form-group message">
+                      <!-- <input class="contacto-form-control" placeholder="Mensaje"> -->
+                      <textarea
+                        class="contacto-form-control"
+                        name="Consulta"
+                        placeholder="Mensaje"
+                      ></textarea>
+                    </div>
+                    <div class="contacto-form-group buttons">
+                      <button class="contacto-form-button">CANCELAR</button>
+                      <button class="contacto-form-button">ENVIAR</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!--     ------------ FOOTER ------------     -->
@@ -182,10 +230,7 @@
         </div>
 
         <!-- Copyright -->
-        <div
-          class="copyright text-center p-3"
-          
-        >
+        <div class="copyright text-center p-3">
           © 2020 Copyright:
           <a href="#">Original Coffee</a>
         </div>
