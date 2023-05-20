@@ -757,8 +757,7 @@ input {
         height: 30px;
         width: 30px; }
   .footer .copyright {
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.7); }
+    color: #ffffff; }
     .footer .copyright a {
       color: #ffffff;
       text-decoration: none; }
