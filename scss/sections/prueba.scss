@@ -1,136 +1,49 @@
-.contacto-s1 {
+.main-index-s3 {
+  padding: 30px;
   display: flex;
-  min-height: 100vh;
-  .container {
-    flex: 0 1 700px;
-    margin: auto;
-    padding: 10px;
-    .screen {
-      position: relative;
-      background: #3e3e3e;
-      border-radius: 15px;
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 20px;
-        right: 20px;
-        bottom: 0;
-        border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        z-index: -1;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .sucursales {
+    .c2-img {
+      // width: 100%;
+      margin-top: 30px;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      &:hover {
+        border-radius: 100px;
+        transform: scale(1.2);
       }
-      .screen-body {
-        display: flex;
-        .screen-body-item {
-          flex: 1;
-          padding: 50px;
-          .app-title {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            color: #fff;
-            font-size: 26px;
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              left: 0;
-              bottom: -10px;
-              width: 25px;
-              height: 4px;
-              background: #fff;
-            }
-          }
-          .app-contact {
-            margin-top: auto;
-            margin-bottom: 1rem;
-            font-size: 8px;
-            color: #888;
-            p {
-              margin-bottom: 0;
-            }
-          }
-        }
-        .left {
-          display: flex;
-          flex-direction: column;
-        }
-        .contacto-form {
-          .contacto-form-group {
-            margin-bottom: 15px;
-            .contacto-form-control {
-              width: 100%;
-              padding: 10px 0;
-              background: none;
-              border: none;
-              border-bottom: 1px solid #666;
-              color: #ddd;
-              font-size: 14px;
-              text-transform: uppercase;
-              outline: none;
-              transition: border-color 0.2s;
-            }
-            &::placeholder {
-              color: #666;
-            }
-            &:focus {
-              border-bottom-color: #ddd;
-            }
-            .contacto-form-button {
-              background: none;
-              border: none;
-              color: #fff;
-              font-size: 14px;
-              cursor: pointer;
-              outline: none;
-              &:hover {
-                color: #a1b27d;
-                transform: scale(1.07);
-                transition: 1s transform;
-              }
-            }
-          }
-        }
-        .message {
-          margin-top: 40px;
-        }
-        .buttons {
-          margin-bottom: 0;
-          text-align: right;
-        }
+      div{
+        background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684394570/page-cafe_groew9.png);
+        background-size: cover;
+        background-position: center;
+        display: table;
+        background-attachment: fixed;
+
+      }
+      a {
+      
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
       }
     }
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
-    .left {
-      margin-bottom: 30px;
-    }
-    .screen-body-item {
-      .app-title {
-        /* flex-direction: row; */
-        &:after {
-          display: none;
-        }
-        span {
-          margin-right: 12px;
-        }
+    .c2-text {
+      width: 100%;
+      text-align: center;
+      h2 {
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
-
-  .screen-body-item {
-    padding: 0;
   }
 }

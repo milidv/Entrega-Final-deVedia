@@ -1,3 +1,9 @@
 @mixin color-variedad ($background-color){
     background-color: $background-color;
 }
+@mixin locations {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  

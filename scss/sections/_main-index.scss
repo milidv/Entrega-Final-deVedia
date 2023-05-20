@@ -1,4 +1,4 @@
-.s1 {
+.main-index-s1 {
   height: 100vh;
   width: 100%;
   background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684355040/proyecto-final/rsz_fondo-granos-cafe_t1oifi.avif);
@@ -18,163 +18,156 @@
   }
 }
 
-.main-index-s1 {
-  // margin-top: 30vh;
+.main-index-s2 {
   display: flex;
   flex-direction: column-reverse;
   /* MQ 1024 flex direction row*/
 
-  .s1-left {
-    background-color: #a1b27d;
+  .s2-left {
+    background-color: #a4ac86;
     height: 100vh;
-    width: 50%;
-    // font-family: "Montserrat", sans-serif;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: auto;
     h1 {
-      /* font-size: calc(2rem + 1.8vw); */
       font-weight: 800;
       font-size: calc(1.1rem + 2vw);
       text-transform: uppercase;
       width: 50%;
       margin: auto;
-      /* margin-top: 40px; */
       margin-top: 3vw;
-      /* margin-bottom: 40px; */
       margin-bottom: 2vw;
-      /* margin-left: 80px; */
       margin-left: 5vw;
     }
 
     p {
       font-size: calc(0.7rem + 0.4vw);
-      text-align: left;
+      text-align: justify;
       line-height: calc(1rem + 1.2vw);
-      width: 80%;
+      width: 100%;
       margin: auto;
       /* margin-left: 80px; */
-      margin-left: 5vw;
+      padding-left: 5vw;
+      padding-right: 5vw;
       padding-bottom: 20px;
     }
-    .s1-button {
-      margin-top: 0;
-      a {
-        border: 3px solid #fff;
-        padding: 10px;
-        text-decoration: none;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: #fff;
-        height: 40 px;
-        border-radius: 30px;
-        font-weight: bold;
-        display: inline-block;
-        /*margin-left: 10vw; */
-      }
-    }
   }
-  .s1-right {
+  .s2-right {
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684042038/proyecto-final/index_gy2zxk.avif);
     background-size: cover;
     background-position: center;
-    width: 50%;
+    width: 100%;
     height: 100vh;
   }
 }
 
-/* usar extend pra todas las pages */
-
-.index-container2 {
-  padding: 30px;
+.main-index-s3 {
+  height: 80vh;
+  width: 100vw;
+  background: #b6a690;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  .sucursales {
-    .c2-img {
+  .s3-wide {
+    margin: auto;
+    padding: auto;
+    padding: 5%;
+    .s3-link {
+      height: 30%;
       width: 100%;
-      margin-top: 30px;
-      text-align: center;
-      &:hover {
-        border-radius: 100px;
-        transform: scale(1.2);
-      }
-      img {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-      }
-    }
-    .c2-text {
-      width: 100%;
-      text-align: center;
-      h2 {
-        margin-top: 5px;
-        margin-bottom: 20px;
-        font-weight: 600;
-        font-size: 20px;
-        letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: auto;
+      .link-pages {
+        height: calc(4em + 7vw);
+        width: calc(4em + 7vw);
+        background: #b6a690;
+        border-radius: 20px;
+        box-shadow: -5px -5px 9px #c4b39f, 5px 5px 9px #5e68794d;
+        margin-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          box-shadow: inset -5px -5px 9px #c4b39f, inset 5px 5px 9px #5e68794d;
+          opacity: 0.7;
+          transition: 0.4s;
+        }
+        .page-link {
+          height: 100%;
+          width: 100%;
+          visibility: visible;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .page-img {
+            height: calc(1.5em + 2vw);
+            width: calc(0.7em + 2vw);
+            margin: auto;
+          }
+          .size-img {
+            width: 45%;
+            height: 40%;
+          }
+        }
       }
     }
   }
 }
+
+.navbar-toggler-icon {
+background-image: url("https://res.cloudinary.com/drb5udcck/image/upload/v1684535563/proyecto-final/hamburger-button_ogoocw.png");
+background-size: cover;
+background-position: center;
+width: 30px;
+height:  30px;
+border-radius: 50%;
+box-shadow: -2px -2px 3px #f6ede4, 2px 2px 3px #a89b8e;
+border-color: $tostado;
+
+}
+
+
+/* usar extend pra todas las pages */
 
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 
 @media (min-width: 768px) {
-  .index-container1 {
-    .c1-img {
-      height: 420px;
-    }
-  }
-  .index-container2 {
-    width: 80%;
-    justify-content: space-evenly;
-    .sucursales {
-      .c2-img {
-        &:hover {
-        }
-        img {
-        }
-      }
-      .c2-text {
-        h2 {
-          margin-top: 15px;
-        }
-      }
-    }
+  .main-index-s3 {
+    justify-content: space-betweeb;
   }
 }
 
 @media (min-width: 1024px) {
-  .main-index-s1 {
+  .main-index-s2 {
     flex-direction: row;
-
-    .s1-left {
-    }
-  }
-  .index-container1 {
-    .c1-img {
-      height: 520px;
-    }
-  }
-
-  .index-container2 {
-    width: 95%;
-    justify-content: space-between;
-    .sucursales {
-      .c2-img {
-        &:hover {
-        }
-        img {
-        }
+    .s2-left {
+      // width: 50%;
+      h1{
+        margin-bottom: 1vw;
       }
-      .c2-text {
-        h2 {
-        }
-      }
+
+      p {
+        width: 90%;
+        text-align: left;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 2px;
+  
     }
+    .s2-right {
+      width: 50%;
+
+    }
+
   }
+}
 }

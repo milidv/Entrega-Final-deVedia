@@ -1,177 +1,174 @@
 /* DONDE ENCONTRARNOS: container 1 */
-/* no se si lo voy a poner o no al listado, quizas haya q crear un div */
-
-.donde-encontrarnos-container1 {
-    width: 100%;
-    margin-top: 39vh;
-  text-align: center;
-  padding-top: 20px;
-  //   padding-bottom: 30px;
-
-  .c1-lista-sucursale {
-    h1 {
-      font-size: 30px;
-      font-weight: 600;
-      text-align: center;
-      letter-spacing: 1px;
-    }
-  }
-}
-
-/* DONDE ENCONTRARNOS: container 2 */
-.donde-encontrarnos-container2 {
-  width: 100vw;
-  text-align: center;
-  margin: auto;
-  h3 {
-    // margin-top: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-  .ubicacion {
-    margin-top: 40px;
-    .c2-sucursales {
-      padding-bottom: 15vh;
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-auto-rows: 1fr;
-      gap: 0px 0px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "map map"
-        "map map"
-        "foto horarios";
-      .map {
-        grid-area: map;
-        width: 90vw;
-        height: 300px;
-        iframe {
-          width: 90vw;
-          height: 90vw;
-        }
-      }
-      .foto {
-        grid-area: foto;
-        width: 50vw;
-        height: 50vw;
-        img {
-          margin: 20px 20px 40px 10px;
-          width: 50vw;
-          height: 50vw;
-          border-radius: 50%;
-        }
-      }
-      .horarios {
-        grid-area: horarios;
-        width: 40vw;
-        height: 50vw;
-        p {
-          // height: 160px;
-          width: 40vw;
-          margin: auto;
-          margin-top: 20px;
-          padding-top: 30px;
-          padding-left: 5px;
-          // margin: 60px 15px;
-          font-size: 14px;
-          font-weight: 500;
-          text-align: left;
-          letter-spacing: 1px;
-        }
-      }
-    }
-  }
-  hr {
-    width: 280px;
-    height: 3px;
-    margin: auto;
-    margin-top: 80px;
-    border-style: none;
-    background-color: #dcd9d4;
-    background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
-      radial-gradient(
-        88% 271%,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(254, 254, 254, 0.25) 1%,
-        rgba(0, 0, 0, 0.25) 100%
-      ),
-      radial-gradient(
-        50% 100%,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-      );
-    background-blend-mode: normal, lighten, soft-light;
-  }
-}
-
-.c2-sucursal {
-  margin-bottom: 10px;
+.main-donde-encontrarnos-s1 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-direction: column-reverse;
+  /* MQ 1024 flex direction row*/
+
+  .s1-left {
+    background-color: #bf6f4e;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    h1 {
+      font-weight: 800;
+      font-size: calc(1.1rem + 2vw);
+      text-transform: uppercase;
+      width: 50%;
+      margin: auto;
+      margin-top: 3vw;
+      margin-bottom: 2vw;
+      margin-left: 5vw;
+    }
+
+    p {
+      font-size: calc(0.7rem + 0.4vw);
+      text-align: justify;
+      line-height: calc(1rem + 1.2vw);
+      width: 100%;
+      margin: auto;
+      /* margin-left: 80px; */
+      padding-left: 5vw;
+      padding-right: 5vw;
+      padding-bottom: 20px;
+    }
+  }
+  .s1-right {
+    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684569264/proyecto-final/copenhagen_psv7b7.avif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
 }
 
-/*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
+/* DONDE ENCONTRARNOS: section 2 */
 
-@media (min-width: 768px) {
-    .donde-encontrarnos-container1 {
-        margin-top: 45vh;
+
+.main-donde-encontrarnos-s2 {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  h2 {
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    padding-left: 5vw;
+    font-weight: 600;
+    font-size: calc(1.1rem + 2vw);
   }
-  .donde-encontrarnos-container2 {
-    .ubicacion {
-      .c2-sucursales {
-        padding-bottom: 25vh;
-        margin: auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-auto-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "map map foto"
-          "map map horarios";
-        justify-items: stretch;
-        .map {
-          width: 40%;
-          height: 300px;
-          margin-left: 50px;
-          iframe {
-            margin: auto;
-            padding: 20px;
-            width: 400px;
-            height: 450px;
-          }
-        }
-        .foto {
-          width: 20%;
-          height: 20%;
+  .s2-cards{
+    margin: auto;
+    .card-location {
+      max-width: 960px;
+      border-radius: 32px;
+      box-shadow:-24px -24px 80px #f6ede4, 24px 24px 80px #a89b8e;
+      padding: 1rem;
+      box-sizing: border-box;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      @include locations {
+        flex-direction: row;
+        align-items: center;
+        margin: 40px;
+        padding: 32px;
+      }
+      .card-map {
+        width: 100%;
+        max-height: 200px;
+        border-radius: 32px;
+        object-fit: cover;
+        margin-bottom: 18px;
+        @include locations {
+          width: 45%;
+          max-height: none;
+          min-height: 200px;
           margin-bottom: 0;
-
-          img {
-            margin-right: 30px;
-            padding: 20px;
-            width: 215px;
-            height: 215px;
-            margin-bottom: 0;
-          }
         }
-        .horarios {
-          width: 20%;
-          height: 20%;
-          p {
-            margin-right: 25vh;
-            padding: 20px;
-            width: 215px;
-            text-align: center;
-            margin-left: 10px;
+      }
+      
+      .card-info {
+        @include locations {
+          width: 55%;
+          padding-left: 1.5rem;
+        }
+        .card-title {
+          text-transform: uppercase;
+          font-size: calc(1.1rem + 1vw);
+          line-height: 1.4;
+          font-weight: 600;
+          color: $oscuro;
+          box-decoration-break: clone;
+          background: $tostado;
+          background-size: 25& 100% ;
+          padding: 0 4px;
+          padding-left: 10px;
+          margin-left: -4px;
+          margin-bottom: 2rem;
+        }
+        
+        .card-horario {
+          display: block;
+          font-size: calc(0.7rem + 0.2vw);
+          line-height:  1.2;
+          text-transform: uppercase;
+          color: $oscuro;
+          margin-bottom: 2rem;
+        
+          
+          @include locations {
+            margin-bottom: 8px;
           }
         }
       }
     }
+
   }
 }
+
+
+/* MEDIA QUERIS */
+
+
+@media screen and (min-width: 1024px) {
+  .main-donde-encontrarnos-s1 {
+    flex-direction: row;
+    .s1-left {
+      // width: 50%;
+      h1 {
+        width: 60%;
+        margin-bottom: 1vw;
+      }
+
+      p {
+        width: 90%;
+        text-align: left;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 2px;
+      }
+      .s1-right {
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
