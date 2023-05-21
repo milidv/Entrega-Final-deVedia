@@ -9,38 +9,58 @@
 /* ----- Variables ----- */
 /* ----- Paleta de colores ----- */
 .header {
-  min-height: 30vh;
+  min-height: 20vh;
   width: 100vw;
   padding: 10px;
-  margin-top: 0; }
+  margin-top: 0;
+  display: flex;
+  position: relative; }
   .header .header-nav {
-    display: flex;
-    align-items: center; }
-    .header .header-nav .menu-hamburguesa .menu-boton {
-      height: 30px;
-      width: 30px;
-      border: none;
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 17px; }
-      .header .header-nav .menu-hamburguesa .menu-boton:hoover {
-        border-color: #ffffff; }
-    .header .header-nav .iniciales-oc {
-      width: 30px; }
-    .header .header-nav .menu-lista .active {
-      font-weight: 600; }
-  .header .header-logo {
-    margin: auto; }
-    .header .header-logo .logo {
-      width: 60vw;
-      margin: auto; }
+    width: 100%; }
+    .header .header-nav .container {
+      width: 100%;
+      display: flex;
+      justify-content: left;
+      padding-left: 0; }
+      .header .header-nav .container .menu-hamburguesa .menu-boton {
+        height: 40px;
+        width: 40px;
+        border: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 17px; }
+        .header .header-nav .container .menu-hamburguesa .menu-boton:hoover {
+          border-color: #ffffff; }
+      .header .header-nav .container .menu-hamburguesa .navbar-toggler-icon {
+        height: 2.5rem;
+        width: 2.5rem; }
+        .header .header-nav .container .menu-hamburguesa .navbar-toggler-icon .navbar-toggler-icon {
+          background-image: url("https://res.cloudinary.com/drb5udcck/image/upload/v1684535563/proyecto-final/hamburger-button_ogoocw.png");
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          box-shadow: -2px -2px 3px #f6ede4, 2px 2px 3px #a89b8e;
+          border-color: #b6a690; }
+      .header .header-nav .container .menu-hamburguesa .iniciales-oc {
+        width: 30px; }
+      .header .header-nav .container .menu-hamburguesa .menu-lista .active {
+        font-weight: 600; }
+      .header .header-nav .container .header-logo {
+        width: 80%; }
+        .header .header-nav .container .header-logo .navbar-brand {
+          display: flex;
+          justify-content: center;
+          width: 100%; }
+          .header .header-nav .container .header-logo .navbar-brand .logo {
+            width: clamp(200px, 80%, 500px);
+            margin: auto; }
 
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 @media (min-width: 768px) {
   .header .header-nav .header-logo {
-    margin: auto; }
-    .header .header-nav .header-logo .logo {
-      width: 255px; } }
+    margin: auto; } }
 
 @media (min-width: 1024px) {
   .header .header-nav .menu-hamburguesa .menu .menu-lista ul {
@@ -65,7 +85,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  position: relative; }
   .main .highlighted-text {
     color: #fff; }
 
@@ -176,16 +197,6 @@
           .main-index-s3 .s3-wide .s3-link .link-pages .page-link .size-img {
             width: 45%;
             height: 40%; }
-
-.navbar-toggler-icon {
-  background-image: url("https://res.cloudinary.com/drb5udcck/image/upload/v1684535563/proyecto-final/hamburger-button_ogoocw.png");
-  background-size: cover;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  box-shadow: -2px -2px 3px #f6ede4, 2px 2px 3px #a89b8e;
-  border-color: #b6a690; }
 
 /* usar extend pra todas las pages */
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
@@ -457,13 +468,13 @@
     .main-donde-encontrarnos-s1 .s1-left .s1-right {
       width: 50%; } }
 
-/* SUSTENTABILIDAD: container # */
+/* SUSTENTABILIDAD: section1 */
 .main-sustentabilidad-s1 {
   display: flex;
   flex-direction: column-reverse;
   /* MQ 1024 flex direction row*/ }
   .main-sustentabilidad-s1 .s1-left {
-    background-color: #bf6f4e;
+    background-color: #a4ac86;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -497,39 +508,64 @@
     width: 100%;
     height: 100vh; }
 
-.main-sustentabilidad-s {
+/* SUSTENTABILIDAD: section2 */
+.main-sustentabilidad-s2 {
+  margin: auto;
   padding-top: 5vh;
-  padding-bottom: 2vh;
-  padding-left: 5vw;
-  font-size: calc(0.5rem + 1.5vw);
-  line-height: 1.5;
-  height: 100vh;
-  place-items: center; }
-  .main-sustentabilidad-s a {
-    text-decoration: none;
-    color: #18272f;
-    font-weight: 600;
-    position: relative; }
-    .main-sustentabilidad-s a::before {
-      content: "";
-      background-color: #a4ac86;
-      position: absolute;
-      left: 0;
-      bottom: 3px;
+  padding-bottom: 10vh;
+  background-color: #bf6f4e;
+  width: 100%;
+  min-width: 100vh;
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .main-sustentabilidad-s2 .s2-wide {
+    margin: auto;
+    width: 80%;
+    padding-bottom: 10vh; }
+    .main-sustentabilidad-s2 .s2-wide .s2-text {
+      font-size: calc(1.025rem + .5vw);
+      line-height: 1.5;
+      text-align: center; }
+      .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link {
+        text-decoration: none;
+        color: #18272f;
+        font-weight: 600;
+        position: relative; }
+        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link::before {
+          content: "";
+          background-color: #eae0d5;
+          position: absolute;
+          left: 0;
+          bottom: 3px;
+          width: 100%;
+          height: 8px;
+          z-index: -1;
+          transition: all 0.3s ease-in-out; }
+        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:hover::before {
+          bottom: 0;
+          height: 100%; }
+        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:link {
+          text-decoration: none; }
+        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:visited {
+          text-decoration: none; }
+        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:active {
+          text-decoration: none; }
+  .main-sustentabilidad-s2 .s2grid {
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 250px));
+    gap: 30px; }
+    .main-sustentabilidad-s2 .s2grid__img {
       width: 100%;
-      height: 8px;
-      z-index: -1;
-      transition: all 0.3s ease-in-out; }
-    .main-sustentabilidad-s a:hover::before {
-      bottom: 0;
-      height: 100%; }
-    .main-sustentabilidad-s a:link {
-      text-decoration: none; }
-    .main-sustentabilidad-s a:visited {
-      text-decoration: none; }
-    .main-sustentabilidad-s a:active {
-      text-decoration: none; }
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px; }
 
+/* SUSTENTABILIDAD: section3 */
 .sustentabilidad-container1 {
   width: 100vw;
   margin: auto;

@@ -1,11 +1,11 @@
-/* SUSTENTABILIDAD: container # */
+/* SUSTENTABILIDAD: section1 */
 
 .main-sustentabilidad-s1 {
   display: flex;
   flex-direction: column-reverse;
   /* MQ 1024 flex direction row*/
   .s1-left {
-    background-color: #bf6f4e;
+    background-color: $verde;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -46,47 +46,96 @@
   }
 }
 
-.main-sustentabilidad-s {
-  padding-top: 5vh;
-  padding-bottom: 2vh;
-  padding-left: 5vw;
+/* SUSTENTABILIDAD: section2 */
 
-  // display: grid;
-  font-size: calc(0.5rem + 1.5vw);
-  line-height: 1.5;
-  height: 100vh;
+.main-sustentabilidad-s2 {
+  margin: auto;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  background-color: $terracota;
+  width: 100%;
+  min-width: 100vh;
   place-items: center;
-  a {
-    text-decoration: none;
-    color: #18272f;
-    font-weight: 600;
-    position: relative;
-    &::before {
-      content: "";
-      background-color: $verde;
-      position: absolute;
-      left: 0;
-      bottom: 3px;
-      width: 100%;
-      height: 8px;
-      z-index: -1;
-      transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+    // flex-wrap: nowrap;
+    align-items: center;
+  .s2-wide{
+    margin: auto;
+    width: 80%;
+    padding-bottom: 10vh;
+
+    .s2-text{
+      font-size: calc(1.025rem + .5vw);;
+      line-height: 1.5;
+      text-align: center;
+      .s2-link{
+        text-decoration: none;
+        color: #18272f;
+        font-weight: 600;
+        position: relative;
+        &::before {
+          content: "";
+          background-color: $claro;
+          position: absolute;
+          left: 0;
+          bottom: 3px;
+          width: 100%;
+          height: 8px;
+          z-index: -1;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover::before {
+          bottom: 0;
+          height: 100%;
+        }
+        &:link{
+          text-decoration:none;
+        }
+        &:visited{
+          text-decoration:none;
+        }
+        &:active {
+          text-decoration:none;
+      }
     }
-    &:hover::before {
-      bottom: 0;
-      height: 100%;
-    }
-    &:link{
-      text-decoration:none;
-    }
-    &:visited{
-      text-decoration:none;
-    }
-    &:active {
-      text-decoration:none;
   }
   }
-}
+  .s2grid{
+  width: 60%;
+  margin:0 auto; 
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 250px));
+  gap: 30px;
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+    }
+  }
+
+
+/* SUSTENTABILIDAD: section3 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sustentabilidad-container1 {
   width: 100vw;
