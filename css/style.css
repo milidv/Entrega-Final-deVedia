@@ -8,6 +8,16 @@
 /* ----- Tipografías ----- */
 /* ----- Variables ----- */
 /* ----- Paleta de colores ----- */
+.main-nuestro-cafe-s1 .s1-left, .main__dondeencontrarnoss1__left, .main-sustentabilidad-s1 .s1-left {
+  margin: auto;
+  padding: 5vw;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-evenly; }
+
 .header {
   min-height: 20vh;
   width: 100vw;
@@ -72,10 +82,14 @@
     flex-wrap: wrap;
     flex-direction: column; } }
 
+:root {
+  font-size: 62.5%; }
+
 .body {
   background: #eae0d5;
   font-family: "Montserrat", sans-serif;
-  color: rgba(0, 0, 0, 0.7); }
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.6rem; }
 
 .main {
   min-height: 60vh;
@@ -90,16 +104,16 @@
   .main .highlighted-text {
     color: #fff; }
 
-.main-index-s1 {
-  height: 100vh;
-  width: 100%;
+.main__indexs1 {
+  min-height: 100vh;
+  width: 100vw;
   background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684355040/proyecto-final/rsz_fondo-granos-cafe_t1oifi.avif);
   background-size: cover;
   background-position: center;
   display: table;
   background-attachment: fixed; }
-  .main-index-s1 h1 {
-    font-size: calc(1.1rem + 3vw);
+  .main__indexs1__title {
+    font-size: calc(1.7em + 1vw);
     font-weight: 800;
     color: #fff;
     margin: 0;
@@ -108,38 +122,35 @@
     vertical-align: middle;
     text-transform: capitalize; }
 
-.main-index-s2 {
+.main__indexs2 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/ }
-  .main-index-s2 .s2-left {
-    background-color: #a4ac86;
+  width: 100vw; }
+  .main__indexs2__left {
+    background-color: #bf6f4e;
+    margin: auto;
+    padding: 5vw;
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
-    margin: auto; }
-    .main-index-s2 .s2-left h1 {
+    justify-content: space-evenly; }
+    .main__indexs2__left h1 {
+      margin: 0;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: calc(1.7em + 1vw);
       text-transform: uppercase;
-      width: 50%;
-      margin: auto;
-      margin-top: 3vw;
-      margin-bottom: 2vw;
-      margin-left: 5vw; }
-    .main-index-s2 .s2-left p {
-      font-size: calc(0.7rem + 0.4vw);
+      text-align: left;
+      width: 50%; }
+    .main__indexs2__left__text {
+      margin: auto 0;
+      font-size: calc(0.4em + 1vw);
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
-      width: 100%;
-      margin: auto;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px; }
-  .main-index-s2 .s2-right {
+      line-height: 150%;
+      width: 100%; }
+  .main__indexs2__right {
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684042038/proyecto-final/index_gy2zxk.avif);
     background-size: cover;
     background-position: center;
@@ -198,67 +209,53 @@
             width: 45%;
             height: 40%; }
 
-/* usar extend pra todas las pages */
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 @media (min-width: 768px) {
   .main-index-s3 {
     justify-content: space-betweeb; } }
 
 @media (min-width: 1024px) {
-  .main-index-s2 {
+  .main__indexs2 {
     flex-direction: row; }
-    .main-index-s2 .s2-left h1 {
-      margin-bottom: 1vw; }
-    .main-index-s2 .s2-left p {
-      width: 90%;
-      text-align: left;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      padding-bottom: 2px; }
-    .main-index-s2 .s2-left .s2-right {
+    .main__indexs2__left {
+      width: 50%; }
+      .main__indexs2__left__text {
+        text-align: left; }
+    .main__indexs2__right {
       width: 50%; } }
 
 /* NUESTRO CAFÉ: container 1 */
 .main-nuestro-cafe-s1 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/ }
+  width: 100vw; }
   .main-nuestro-cafe-s1 .s1-left {
-    background-color: #bf6f4e;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto; }
+    background-color: #bf6f4e; }
     .main-nuestro-cafe-s1 .s1-left h1 {
+      margin: 0;
+      padding-bottom: 4vw;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: calc(1.7em + 1vw);
       text-transform: uppercase;
-      width: 50%;
-      margin: auto;
-      margin-top: 3vw;
-      margin-bottom: 2vw;
-      margin-left: 5vw; }
+      text-align: left;
+      width: 100%; }
     .main-nuestro-cafe-s1 .s1-left p {
-      font-size: calc(0.7rem + 0.4vw);
+      margin: auto 0;
+      font-size: calc(0.4em + 1vw);
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
-      width: 100%;
-      margin: auto;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px; }
+      line-height: 150%;
+      width: 100%; }
   .main-nuestro-cafe-s1 .s1-right {
-    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684075831/proyecto-final/nc-cafe-en-casa_mvdurz.avif);
+    height: 100vh;
+    background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684685701/proyecto-final/cafe-hygge_wskh4c.avif);
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100vh; }
+    width: 100%; }
 
 /* NUESTRO CAFÉ: section 2 */
 .main-nuestro-cafe-s2 {
+  margin: 0 auto;
   height: 60vh;
   width: 100vw;
   background-color: #eae0d5;
@@ -268,18 +265,15 @@
   justify-content: space-around;
   align-items: center; }
   .main-nuestro-cafe-s2 h2 {
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-    padding-left: 5vw;
+    margin: 0;
     font-weight: 600;
-    font-size: calc(1.1rem + 2vw); }
+    font-size: calc(1.2em + 1vw); }
   .main-nuestro-cafe-s2 .box-cafe {
     height: 50%;
     display: flex;
     width: 90vw;
     padding: 2% 10%;
-    box-sizing: border-box;
-    /* height: 100vh; */ }
+    box-sizing: border-box; }
     .main-nuestro-cafe-s2 .box-cafe .box {
       flex: 1;
       height: 80%;
@@ -307,14 +301,9 @@
   .main-nuestro-cafe-s1 {
     flex-direction: row; }
     .main-nuestro-cafe-s1 .s1-left h1 {
-      width: 60%;
-      margin-bottom: 1vw; }
+      width: 80%; }
     .main-nuestro-cafe-s1 .s1-left p {
-      width: 90%;
-      text-align: left;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      padding-bottom: 2px; }
+      text-align: left; }
     .main-nuestro-cafe-s1 .s1-left .s1-right {
       width: 50%; }
   .main-nuestro-cafe-s2 {
@@ -331,47 +320,30 @@
           width: 100%; }
           .main-nuestro-cafe-s2 .box-cafe .box img:hover {
             width: 100%;
-            height: 100%; }
-  .video {
-    height: 100vh; }
-  iframe {
-    width: 100%;
-    height: 100%;
-    /* height: 100%; */ } }
+            height: 100%; } }
 
-/* DONDE ENCONTRARNOS: container 1 */
-.main-donde-encontrarnos-s1 {
+/* DONDE ENCONTRARNOS: section 1 */
+.main__dondeencontrarnoss1 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/ }
-  .main-donde-encontrarnos-s1 .s1-left {
-    background-color: #bf6f4e;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto; }
-    .main-donde-encontrarnos-s1 .s1-left h1 {
+  width: 100vw; }
+  .main__dondeencontrarnoss1__left {
+    background-color: #b6a690; }
+    .main__dondeencontrarnoss1__left h1 {
+      margin: 0;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: calc(1.7em + 1vw);
       text-transform: uppercase;
-      width: 50%;
-      margin: auto;
-      margin-top: 3vw;
-      margin-bottom: 2vw;
-      margin-left: 5vw; }
-    .main-donde-encontrarnos-s1 .s1-left p {
-      font-size: calc(0.7rem + 0.4vw);
+      text-align: left;
+      width: 50%; }
+    .main__dondeencontrarnoss1__left__text {
+      margin: 0;
+      font-size: calc(0.4em + 1vw);
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
-      width: 100%;
-      margin: auto;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px; }
-  .main-donde-encontrarnos-s1 .s1-right {
+      line-height: 150%;
+      width: 100%; }
+  .main__dondeencontrarnoss1__right {
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684569264/proyecto-final/copenhagen_psv7b7.avif);
     background-size: cover;
     background-position: center;
@@ -379,56 +351,54 @@
     height: 100vh; }
 
 /* DONDE ENCONTRARNOS: section 2 */
-.main-donde-encontrarnos-s2 {
+.main__dondeencontrarnoss2 {
+  padding: 5vw;
+  margin: 0;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0; }
-  .main-donde-encontrarnos-s2 h2 {
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-    padding-left: 5vw;
+  min-height: 100vh; }
+  .main__dondeencontrarnoss2 h2 {
+    margin: 0;
     font-weight: 600;
-    font-size: calc(1.1rem + 2vw); }
-  .main-donde-encontrarnos-s2 .s2-cards {
-    margin: auto; }
-    .main-donde-encontrarnos-s2 .s2-cards .card-location {
+    font-size: calc(1.2em + 1vw); }
+  .main__dondeencontrarnoss2__cards {
+    margin: auto;
+    padding: 1rem; }
+    .main__dondeencontrarnoss2__cards__location {
       max-width: 960px;
       border-radius: 32px;
-      box-shadow: -24px -24px 80px #f6ede4, 24px 24px 80px #a89b8e;
-      padding: 1rem;
+      box-shadow: -8px -8px 20px #f6ede4, 8px 8px 20px #a89b8e;
       box-sizing: border-box;
       margin: 20px;
       display: flex;
       flex-direction: column; }
       @media (min-width: 576px) {
-        .main-donde-encontrarnos-s2 .s2-cards .card-location {
-          flex-direction: row;
-          align-items: center;
+        .main__dondeencontrarnoss2__cards__location {
           margin: 40px;
-          padding: 32px; } }
-      .main-donde-encontrarnos-s2 .s2-cards .card-location .card-map {
+          padding: 32px;
+          flex-direction: row;
+          align-items: center; } }
+      .main__dondeencontrarnoss2__cards__location__map {
+        margin-bottom: 18px;
         width: 100%;
         max-height: 200px;
         border-radius: 32px;
-        object-fit: cover;
-        margin-bottom: 18px; }
+        object-fit: cover; }
         @media (min-width: 576px) {
-          .main-donde-encontrarnos-s2 .s2-cards .card-location .card-map {
+          .main__dondeencontrarnoss2__cards__location__map {
             width: 45%;
             max-height: none;
             min-height: 200px;
             margin-bottom: 0; } }
       @media (min-width: 576px) {
-        .main-donde-encontrarnos-s2 .s2-cards .card-location .card-info {
+        .main__dondeencontrarnoss2__cards__location__info {
           width: 55%;
           padding-left: 1.5rem; } }
-      .main-donde-encontrarnos-s2 .s2-cards .card-location .card-info .card-title {
+      .main__dondeencontrarnoss2__cards__location__info__title {
         text-transform: uppercase;
         font-size: calc(1.1rem + 1vw);
         line-height: 1.4;
@@ -436,12 +406,12 @@
         color: rgba(0, 0, 0, 0.7);
         box-decoration-break: clone;
         background: #b6a690;
-        background-size: 25 .main-donde-encontrarnos-s2 .s2-cards .card-location .card-info .card-title 100%;
+        background-size: 25 .main__dondeencontrarnoss2__cards__location__info__title 100%;
         padding: 0 4px;
         padding-left: 10px;
         margin-left: -4px;
         margin-bottom: 2rem; }
-      .main-donde-encontrarnos-s2 .s2-cards .card-location .card-info .card-horario {
+      .main__dondeencontrarnoss2__cards__location__info__horario {
         display: block;
         font-size: calc(0.7rem + 0.2vw);
         line-height: 1.2;
@@ -449,59 +419,76 @@
         color: rgba(0, 0, 0, 0.7);
         margin-bottom: 2rem; }
         @media (min-width: 576px) {
-          .main-donde-encontrarnos-s2 .s2-cards .card-location .card-info .card-horario {
+          .main__dondeencontrarnoss2__cards__location__info__horario {
             margin-bottom: 8px; } }
 
-/* MEDIA QUERIS */
-@media screen and (min-width: 1024px) {
-  .main-donde-encontrarnos-s1 {
-    flex-direction: row; }
-    .main-donde-encontrarnos-s1 .s1-left h1 {
-      width: 60%;
-      margin-bottom: 1vw; }
-    .main-donde-encontrarnos-s1 .s1-left p {
+/* DONDE ENCONTRARNOS: section 3 */
+.main-donde-encontrarnos-s3 {
+  margin: auto;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+  background-color: #bf6f4e;
+  width: 100%;
+  min-height: 100vh;
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .main-donde-encontrarnos-s3__grid {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 400px));
+    gap: 30px; }
+    .main-donde-encontrarnos-s3__grid__img {
+      margin: auto;
       width: 90%;
-      text-align: left;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      padding-bottom: 2px; }
-    .main-donde-encontrarnos-s1 .s1-left .s1-right {
+      height: 90%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: -1px -1px 15px #d4977d, 10px 10px 10px #753d26; }
+      .main-donde-encontrarnos-s3__grid__img:hover {
+        transform: scale(1.05);
+        transition: 0.2s;
+        box-shadow: 10px 10px 10px #753d26; }
+
+/* MEDIA QUERIS */
+@media (min-width: 1024px) {
+  .main__dondeencontrarnoss1 {
+    flex-direction: row; }
+    .main__dondeencontrarnoss1__left {
+      width: 50%; }
+      .main__dondeencontrarnoss1__left__text {
+        text-align: left; }
+    .main__dondeencontrarnoss1__right {
       width: 50%; } }
 
 /* SUSTENTABILIDAD: section1 */
 .main-sustentabilidad-s1 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/ }
+  width: 100vw; }
   .main-sustentabilidad-s1 .s1-left {
-    background-color: #a4ac86;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto; }
+    background-color: #a4ac86; }
     .main-sustentabilidad-s1 .s1-left h1 {
+      margin: 0;
+      padding-bottom: 4vw;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: calc(1.7em + 1vw);
       text-transform: uppercase;
-      width: 50%;
-      margin: auto;
-      /* padding-top: 4vw; */
-      margin-bottom: 2vw;
-      margin-left: 5vw; }
+      text-align: left;
+      max-width: 90%;
+      word-break: break-all; }
     .main-sustentabilidad-s1 .s1-left p {
-      font-size: calc(0.7rem + 0.4vw);
+      margin: 0;
+      font-size: calc(0.4em + 1vw);
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
-      width: 100%;
-      margin: auto;
-      margin-top: 0;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px; }
+      line-height: 150%;
+      width: 100%; }
   .main-sustentabilidad-s1 .s1-right {
+    height: 100vh;
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684518137/proyecto-final/rsz_1cafe-sustentabilidad_sbfk1k.avif);
     background-size: cover;
     background-position: center;
@@ -509,111 +496,39 @@
     height: 100vh; }
 
 /* SUSTENTABILIDAD: section2 */
-.main-sustentabilidad-s2 {
-  margin: auto;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
-  background-color: #bf6f4e;
+.main__sustentabilidad-s2 {
+  height: 100vh;
   width: 100%;
-  min-width: 100vh;
+  background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684681188/proyecto-final/hombre-cosecha-recoge-hojas-te-verde-fresco-campo-te-tierra-alta-chiang-mai-tailandia_ewm3dw.avif);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
   place-items: center;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .main-sustentabilidad-s2 .s2-wide {
-    margin: auto;
-    width: 80%;
-    padding-bottom: 10vh; }
-    .main-sustentabilidad-s2 .s2-wide .s2-text {
-      font-size: calc(1.025rem + .5vw);
-      line-height: 1.5;
-      text-align: center; }
-      .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link {
-        text-decoration: none;
-        color: #18272f;
-        font-weight: 600;
-        position: relative; }
-        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link::before {
-          content: "";
-          background-color: #eae0d5;
-          position: absolute;
-          left: 0;
-          bottom: 3px;
-          width: 100%;
-          height: 8px;
-          z-index: -1;
-          transition: all 0.3s ease-in-out; }
-        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:hover::before {
-          bottom: 0;
-          height: 100%; }
-        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:link {
-          text-decoration: none; }
-        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:visited {
-          text-decoration: none; }
-        .main-sustentabilidad-s2 .s2-wide .s2-text .s2-link:active {
-          text-decoration: none; }
-  .main-sustentabilidad-s2 .s2grid {
-    width: 60%;
-    margin: 0 auto;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 250px));
-    gap: 30px; }
-    .main-sustentabilidad-s2 .s2grid__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px; }
-
-/* SUSTENTABILIDAD: section3 */
-.sustentabilidad-container1 {
-  width: 100vw;
-  margin: auto;
-  margin-top: 39vh;
-  margin-bottom: 50px;
-  text-align: center;
-  display: flex;
-  align-content: center;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap; }
-  .sustentabilidad-container1 .c1-info-sustentabilidad {
-    margin-bottom: 50px;
-    padding: 20px; }
-    .sustentabilidad-container1 .c1-info-sustentabilidad h1 {
-      margin-top: 40px;
-      font-size: 30px;
-      font-weight: 600;
+  justify-content: center; }
+  .main__sustentabilidad-s2__wide {
+    margin: auto;
+    width: 80%; }
+    .main__sustentabilidad-s2__wide__text {
+      margin: 0 auto;
+      font-size: calc(0.9rem + 1.8vw);
+      font-weight: 800;
+      color: #ffffff;
       text-align: center;
-      letter-spacing: 1px; }
-    .sustentabilidad-container1 .c1-info-sustentabilidad p {
-      margin: 20px 20px 20px 20px;
-      text-align: center;
-      font-weight: 400;
-      letter-spacing: 1px; }
-    .sustentabilidad-container1 .c1-info-sustentabilidad .c1-lista {
-      margin: auto;
-      letter-spacing: 1px;
-      margin-bottom: 30px; }
-      .sustentabilidad-container1 .c1-info-sustentabilidad .c1-lista ol {
-        text-align: center;
-        list-style: decimal;
-        font-weight: 600;
-        letter-spacing: 1px; }
-    .sustentabilidad-container1 .c1-info-sustentabilidad a {
-      width: 150px;
-      margin: auto;
-      font-size: 15px;
-      padding: 20px;
-      color: #000000;
-      text-align: center;
-      text-decoration: none; }
-      .sustentabilidad-container1 .c1-info-sustentabilidad a:hover {
-        font-size: 15px;
-        padding: 20px;
-        color: #000000;
-        text-decoration: underline; }
+      display: table-cell;
+      vertical-align: middle;
+      text-transform: uppercase; }
+      .main__sustentabilidad-s2__wide__text__link {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 1.5;
+        transition: all 0.3s ease-in-out; }
+        .main__sustentabilidad-s2__wide__text__link:hover {
+          background-color: #a4ac86;
+          transition: all 0.3s ease-in-out; }
 
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 @media screen and (min-width: 1024px) {
@@ -621,20 +536,10 @@
     flex-direction: row; }
     .main-sustentabilidad-s1 .s1-left {
       width: 50%; }
-      .main-sustentabilidad-s1 .s1-left h1 {
-        width: 60%; }
       .main-sustentabilidad-s1 .s1-left p {
-        width: 90%;
-        text-align: left;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-bottom: 2px; }
+        text-align: left; }
     .main-sustentabilidad-s1 .s1-right {
       width: 50%; } }
-
-@media (min-width: 768px) {
-  .sustentabilidad-container1 {
-    margin-top: 50vh; } }
 
 /* CONTACTO: container 1 */
 *,
@@ -647,33 +552,28 @@
 body,
 button,
 input {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px; }
 
-.contacto-s1 {
+.main-contacto-s1 {
   display: flex;
   min-height: 100vh;
   width: 100vw;
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: #eae0d5; }
-  .contacto-s1 .container {
-    flex: 0 1 700px;
+  .main-contacto-s1 .container {
     margin: auto;
-    padding: 10px; }
-    .contacto-s1 .container .c1-titulo {
-      padding-top: 5vh;
-      padding-bottom: 2vh;
-      padding-left: 5vw;
-      font-weight: 600;
-      font-size: calc(1.1rem + 2vw); }
-    .contacto-s1 .container .screen {
+    padding: 1rem;
+    flex: 0 1 700px; }
+    .main-contacto-s1 .container .c1-titulo {
+      margin: 0 auto;
+      padding: 5vh;
+      font-size: calc(1.2em + 1vw); }
+    .main-contacto-s1 .container .screen {
       position: relative;
       background: #b6a690;
       border-radius: 15px;
       box-shadow: -10px -10px 9px #f6ede4, 5px 5px 9px #a89b8e; }
-      .contacto-s1 .container .screen:after {
+      .main-contacto-s1 .container .screen:after {
         content: "";
         display: block;
         position: absolute;
@@ -684,21 +584,20 @@ input {
         border-radius: 15px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         z-index: -1; }
-      .contacto-s1 .container .screen .screen-body {
+      .main-contacto-s1 .container .screen .screen-body {
         padding: 40px;
         display: flex;
         flex-direction: column; }
-        .contacto-s1 .container .screen .screen-body .screen-body-item {
+        .main-contacto-s1 .container .screen .screen-body .screen-body-item {
           flex: 1;
           padding: 0; }
-          .contacto-s1 .container .screen .screen-body .screen-body-item .app-title {
+          .main-contacto-s1 .container .screen .screen-body .screen-body-item .app-title {
             display: flex;
             flex-direction: column;
-            /* flex-direction: row; */
             position: relative;
             color: #fff;
             font-size: 26px; }
-            .contacto-s1 .container .screen .screen-body .screen-body-item .app-title:after {
+            .main-contacto-s1 .container .screen .screen-body .screen-body-item .app-title:after {
               content: "";
               display: none;
               display: block;
@@ -708,22 +607,22 @@ input {
               width: 25px;
               height: 4px;
               background: #fff; }
-            .contacto-s1 .container .screen .screen-body .screen-body-item .app-title span {
+            .main-contacto-s1 .container .screen .screen-body .screen-body-item .app-title span {
               margin-right: 12px; }
-          .contacto-s1 .container .screen .screen-body .screen-body-item .app-contact {
+          .main-contacto-s1 .container .screen .screen-body .screen-body-item .app-contact {
             margin-top: 15px;
             font-size: 12px;
             color: #5a5248; }
-            .contacto-s1 .container .screen .screen-body .screen-body-item .app-contact p {
+            .main-contacto-s1 .container .screen .screen-body .screen-body-item .app-contact p {
               margin-bottom: 3px; }
-        .contacto-s1 .container .screen .screen-body .left {
+        .main-contacto-s1 .container .screen .screen-body .left {
           display: flex;
           flex-direction: column;
           margin-bottom: 30px; }
-        .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group {
+        .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group {
           margin-bottom: 15px;
           font-weight: 600; }
-          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-control {
+          .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-control {
             width: 100%;
             padding: 10px 0;
             background: none;
@@ -737,30 +636,29 @@ input {
             text-transform: uppercase;
             outline: none;
             transition: border-color 0.2s; }
-          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group::placeholder {
+          .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group::placeholder {
             color: #5a5248; }
-          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group:focus {
+          .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group:focus {
             border-bottom-color: #5a5248; }
-          .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button {
+          .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button {
             background: none;
             border: none;
             color: #fff;
             font-size: 14px;
             cursor: pointer;
             outline: none; }
-            .contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button:hover {
+            .main-contacto-s1 .container .screen .screen-body .contacto-form .contacto-form-group .contacto-form-button:hover {
               color: rgba(0, 0, 0, 0.8);
               transform: scale(1.07);
               transition: 1s transform; }
-        .contacto-s1 .container .screen .screen-body .message {
+        .main-contacto-s1 .container .screen .screen-body .message {
           margin-top: 40px; }
-        .contacto-s1 .container .screen .screen-body .buttons {
+        .main-contacto-s1 .container .screen .screen-body .buttons {
           margin-bottom: 0;
           text-align: right; }
 
 @media screen and (min-width: 520px) {
   .screen-body .screen-body-item .app-title {
-    /* flex-direction: row; */
     flex-direction: column; }
     .screen-body .screen-body-item .app-title:after {
       display: block; } }

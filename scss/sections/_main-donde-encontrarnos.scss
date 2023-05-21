@@ -1,92 +1,83 @@
-/* DONDE ENCONTRARNOS: container 1 */
-.main-donde-encontrarnos-s1 {
+/* DONDE ENCONTRARNOS: section 1 */
+
+.main__dondeencontrarnoss1 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/
+  width: 100vw;
 
-  .s1-left {
-    background-color: #bf6f4e;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
+
+  &__left {
+    background-color: $tostado;
+    @extend %bloque-left;
+
     h1 {
+      margin: 0;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: $typo-large;
       text-transform: uppercase;
+      text-align: left;
       width: 50%;
-      margin: auto;
-      margin-top: 3vw;
-      margin-bottom: 2vw;
-      margin-left: 5vw;
     }
 
-    p {
-      font-size: calc(0.7rem + 0.4vw);
+    &__text {
+      margin : 0;
+      font-size: $typo-small;
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
+      line-height: 150%;
       width: 100%;
-      margin: auto;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px;
     }
   }
-  .s1-right {
+  &__right {
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684569264/proyecto-final/copenhagen_psv7b7.avif);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100vh;
+
   }
 }
 
 /* DONDE ENCONTRARNOS: section 2 */
 
-
-.main-donde-encontrarnos-s2 {
-  position:relative;
+.main__dondeencontrarnoss2 {
+  padding: 5vw;
+  margin: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  padding: 0;
-  margin: 0;
   h2 {
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-    padding-left: 5vw;
+    margin: 0;
     font-weight: 600;
-    font-size: calc(1.1rem + 2vw);
+    font-size: $typo-medium;
   }
-  .s2-cards{
+  &__cards {
     margin: auto;
-    .card-location {
+    padding: 1rem;
+    &__location {
       max-width: 960px;
       border-radius: 32px;
-      box-shadow:-24px -24px 80px #f6ede4, 24px 24px 80px #a89b8e;
-      padding: 1rem;
+      box-shadow: -8px -8px 20px #f6ede4, 8px 8px 20px #a89b8e;
       box-sizing: border-box;
       margin: 20px;
       display: flex;
       flex-direction: column;
       @include locations {
-        flex-direction: row;
-        align-items: center;
         margin: 40px;
         padding: 32px;
+        flex-direction: row;
+        align-items: center;
       }
-      .card-map {
+      &__map {
+        margin-bottom: 18px;
         width: 100%;
         max-height: 200px;
         border-radius: 32px;
         object-fit: cover;
-        margin-bottom: 18px;
         @include locations {
           width: 45%;
           max-height: none;
@@ -94,13 +85,13 @@
           margin-bottom: 0;
         }
       }
-      
-      .card-info {
+
+      &__info {
         @include locations {
           width: 55%;
           padding-left: 1.5rem;
         }
-        .card-title {
+        &__title {
           text-transform: uppercase;
           font-size: calc(1.1rem + 1vw);
           line-height: 1.4;
@@ -108,67 +99,83 @@
           color: $oscuro;
           box-decoration-break: clone;
           background: $tostado;
-          background-size: 25& 100% ;
+          background-size: 25& 100%;
           padding: 0 4px;
           padding-left: 10px;
           margin-left: -4px;
           margin-bottom: 2rem;
         }
-        
-        .card-horario {
+
+        &__horario {
           display: block;
           font-size: calc(0.7rem + 0.2vw);
-          line-height:  1.2;
+          line-height: 1.2;
           text-transform: uppercase;
           color: $oscuro;
           margin-bottom: 2rem;
-        
-          
+
           @include locations {
             margin-bottom: 8px;
           }
         }
       }
     }
-
   }
 }
 
+/* DONDE ENCONTRARNOS: section 3 */
 
-/* MEDIA QUERIS */
+.main-donde-encontrarnos-s3 {
+  margin: auto;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+  background-color: $terracota;
+  width: 100%;
+  min-height: 100vh;
+  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__grid {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 400px));
+    gap: 30px;
+    &__img {
+      margin: auto;
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: -1px -1px 15px rgb(212, 151, 125), 10px 10px 10px #753d26;
 
+      &:hover{
+        transform: scale(1.05);
+        transition: 0.2s;
+        box-shadow: 10px 10px 10px #753d26;
 
-@media screen and (min-width: 1024px) {
-  .main-donde-encontrarnos-s1 {
-    flex-direction: row;
-    .s1-left {
-      // width: 50%;
-      h1 {
-        width: 60%;
-        margin-bottom: 1vw;
-      }
-
-      p {
-        width: 90%;
-        text-align: left;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-bottom: 2px;
-      }
-      .s1-right {
-        width: 50%;
       }
     }
   }
 }
 
+/* MEDIA QUERIS */
 
+@media (min-width: 1024px) {
+  .main__dondeencontrarnoss1 {
+    flex-direction: row;
+    &__left {
+      width: 50%;
 
-
-
-
-
-
-
-
+      &__text {
+        text-align: left;
+    }
+   }
+  &__right {
+    width: 50%;
+  }
+}
+}
 

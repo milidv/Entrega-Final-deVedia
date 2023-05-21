@@ -3,41 +3,35 @@
 .main-sustentabilidad-s1 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/
+  width: 100vw;
+
   .s1-left {
     background-color: $verde;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
+    @extend %bloque-left;
+
     h1 {
+      margin: 0;
+      padding-bottom: 4vw;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: $typo-large;
       text-transform: uppercase;
-      width: 50%;
-      margin: auto;
-      /* padding-top: 4vw; */
-      // margin-bottom: calc(1rem + 2.2vh);
-      margin-bottom: 2vw;
-      margin-left: 5vw;
+      text-align: left;
+      max-width: 90%;
+      word-break:break-all
     }
 
     p {
-      font-size: calc(0.7rem + 0.4vw);
+      margin :  0;
+      font-size: $typo-small;
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
+      line-height: 150%;
       width: 100%;
-      margin: auto;
-      margin-top: 0;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px;
     }
   }
   .s1-right {
+    height: 100vh;
+
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684518137/proyecto-final/rsz_1cafe-sustentabilidad_sbfk1k.avif);
     background-size: cover;
     background-position: center;
@@ -47,155 +41,46 @@
 }
 
 /* SUSTENTABILIDAD: section2 */
-
-.main-sustentabilidad-s2 {
-  margin: auto;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
-  background-color: $terracota;
+.main__sustentabilidad-s2 {
+  height: 100vh;
   width: 100%;
-  min-width: 100vh;
+  background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684681188/proyecto-final/hombre-cosecha-recoge-hojas-te-verde-fresco-campo-te-tierra-alta-chiang-mai-tailandia_ewm3dw.avif);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
   place-items: center;
   display: flex;
-  flex-direction: column;
-    // flex-wrap: nowrap;
-    align-items: center;
-  .s2-wide{
-    margin: auto;
-    width: 80%;
-    padding-bottom: 10vh;
-
-    .s2-text{
-      font-size: calc(1.025rem + .5vw);;
-      line-height: 1.5;
-      text-align: center;
-      .s2-link{
-        text-decoration: none;
-        color: #18272f;
-        font-weight: 600;
-        position: relative;
-        &::before {
-          content: "";
-          background-color: $claro;
-          position: absolute;
-          left: 0;
-          bottom: 3px;
-          width: 100%;
-          height: 8px;
-          z-index: -1;
-          transition: all 0.3s ease-in-out;
-        }
-        &:hover::before {
-          bottom: 0;
-          height: 100%;
-        }
-        &:link{
-          text-decoration:none;
-        }
-        &:visited{
-          text-decoration:none;
-        }
-        &:active {
-          text-decoration:none;
-      }
-    }
-  }
-  }
-  .s2grid{
-  width: 60%;
-  margin:0 auto; 
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 250px));
-  gap: 30px;
-  &__img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-    }
-  }
-
-
-/* SUSTENTABILIDAD: section3 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.sustentabilidad-container1 {
-  width: 100vw;
-  margin: auto;
-  margin-top: 39vh;
-  margin-bottom: 50px;
-  text-align: center;
-  //   background-color: #c0a073;
-  display: flex;
-  align-content: center;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  .c1-info-sustentabilidad {
-    margin-bottom: 50px;
-    padding: 20px;
-    h1 {
-      margin-top: 40px;
-      font-size: 30px;
-      font-weight: 600;
+  &__wide {
+    margin: auto;
+    width: 80%;
+    &__text {
+      margin: 0 auto;
+      font-size: calc(0.9rem + 1.8vw);
+      font-weight: 800;
+      color: #ffffff;
       text-align: center;
-      letter-spacing: 1px;
-    }
-    p {
-      margin: 20px 20px 20px 20px;
-      text-align: center;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-    .c1-lista {
-      margin: auto;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
-      ol {
-        text-align: center;
-        list-style: decimal;
-        // margin: 20px 20px 10px 40px;
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
-    }
-    a {
-      width: 150px;
-      margin: auto;
-      font-size: 15px;
-      padding: 20px;
-      color: #000000;
-      text-align: center;
-      //   border: (1px solid #474444);
-      text-decoration: none;
-      &:hover {
-        font-size: 15px;
-        padding: 20px;
-        color: #000000;
-        text-decoration: underline;
+      display: table-cell;
+      vertical-align: middle;
+      text-transform: uppercase;
+      &__link {
+        text-decoration: none;
+        color: #ffffff ;
+        font-weight: 700;
+        line-height: 1.5;
+        transition: all 0.3s ease-in-out;
+         &:hover{
+         background-color: $verde;
+         transition: all 0.3s ease-in-out;
+
+        }
       }
     }
   }
 }
+
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 
 @media screen and (min-width: 1024px) {
@@ -203,27 +88,12 @@
     flex-direction: row;
     .s1-left {
       width: 50%;
-      h1 {
-        width: 60%;
-        // margin-bottom: 1vw;
-      }
-
       p {
-        width: 90%;
         text-align: left;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-bottom: 2px;
       }
     }
     .s1-right {
       width: 50%;
     }
-  }
-}
-
-@media (min-width: 768px) {
-  .sustentabilidad-container1 {
-    margin-top: 50vh;
   }
 }

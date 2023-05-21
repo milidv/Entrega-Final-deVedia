@@ -1,13 +1,13 @@
-.main-index-s1 {
-  height: 100vh;
-  width: 100%;
+.main__indexs1 {
+  min-height: 100vh;
+  width: 100vw;
   background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684355040/proyecto-final/rsz_fondo-granos-cafe_t1oifi.avif);
   background-size: cover;
   background-position: center;
   display: table;
   background-attachment: fixed;
-  h1 {
-    font-size: calc(1.1rem + 3vw);
+  &__title {
+    font-size: $typo-large;
     font-weight: 800;
     color: #fff;
     margin: 0;
@@ -18,43 +18,41 @@
   }
 }
 
-.main-index-s2 {
+.main__indexs2 {
   display: flex;
   flex-direction: column-reverse;
-  /* MQ 1024 flex direction row*/
+  width: 100vw;
 
-  .s2-left {
-    background-color: #a4ac86;
+  &__left {
+    background-color: $terracota;
+    margin: auto;
+    padding: 5vw;
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
-    margin: auto;
+    justify-content: space-evenly;
+
     h1 {
+      margin: 0;
       font-weight: 800;
-      font-size: calc(1.1rem + 2vw);
+      font-size: $typo-large;
       text-transform: uppercase;
+      text-align: left;
       width: 50%;
-      margin: auto;
-      margin-top: 3vw;
-      margin-bottom: 2vw;
-      margin-left: 5vw;
     }
 
-    p {
-      font-size: calc(0.7rem + 0.4vw);
+    &__text {
+      margin : auto 0;
+      font-size: $typo-small;
+      font-weight: 600;
       text-align: justify;
-      line-height: calc(1rem + 1.2vw);
+      line-height: 150%;
       width: 100%;
-      margin: auto;
-      /* margin-left: 80px; */
-      padding-left: 5vw;
-      padding-right: 5vw;
-      padding-bottom: 20px;
     }
   }
-  .s2-right {
+  &__right {
     background-image: url(https://res.cloudinary.com/drb5udcck/image/upload/v1684042038/proyecto-final/index_gy2zxk.avif);
     background-size: cover;
     background-position: center;
@@ -125,7 +123,6 @@
 
 
 
-/* usar extend pra todas las pages */
 
 /*      ------------ MOBILE FIRST - MEDIA QUERIES ------------      */
 
@@ -136,27 +133,16 @@
 }
 
 @media (min-width: 1024px) {
-  .main-index-s2 {
+  .main__indexs2 {
     flex-direction: row;
-    .s2-left {
-      // width: 50%;
-      h1{
-        margin-bottom: 1vw;
-      }
-
-      p {
-        width: 90%;
-        text-align: left;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        padding-bottom: 2px;
-  
-    }
-    .s2-right {
+    &__left {
       width: 50%;
-
+      &__text {
+        text-align: left;
     }
-
+  }
+  &__right {
+    width: 50%;
   }
 }
 }

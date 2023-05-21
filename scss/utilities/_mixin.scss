@@ -1,3 +1,6 @@
+// -------  MIXIN -------- //
+
+
 @mixin color-variedad ($background-color){
     background-color: $background-color;
 }
@@ -7,3 +10,17 @@
     }
   }
   
+
+// -------  EXTEND -------- //
+
+%bloque-left{
+  margin: auto;
+  padding: 5vw;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}

@@ -1,14 +1,19 @@
+:root{
+    font-size: 62.5%;
+}
+
+
 .body{
     background: $claro;
     font-family: $typo;
     color: $oscuro;
+    font-size: 1.6rem;
 }
 
 .main {
     min-height: 60vh;
     width: 100vw;
     margin: auto;
-    // margin-top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
